@@ -1,0 +1,77 @@
+{
+  "name": "showwcase-challenge-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.1",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.3.0",
+    "jsx-control-statements": "^3.2.8",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-only-if": "^1.0.0",
+    "react-scripts": "3.4.3",
+    "react-styleguidist": "^11.1.0",
+    "render-if": "^0.1.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -s public",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/node-logger": "^6.0.21",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/preset-scss": "^1.0.2",
+    "@storybook/react": "^6.0.21",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "react-is": "^16.13.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1"
+  }
+}

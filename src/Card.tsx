@@ -45,7 +45,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
             <li className="list-group-item">
               <button
                 className="btn btn-danger g-font"
-                onClick={() => handleDelete(d, i)}
+                onClick={() => handleDelete(x, y)}
               >
                 Delete My Education
               </button>

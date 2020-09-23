@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({
     <div style={{ height: "100vh" }}>
       <div className="logo">
         <h2 className="avatar">
-          <img alt="logo" src={url} style={{ width: 35, height: 35 }} /> {title}
+          <img alt="logo" src={url} style={{ position: relative, left: 9px }} /> {title}
         </h2>
         <p className="lead">{description}</p>
       </div>

@@ -1,5 +1,5 @@
 # showwcase-challenge-app
-Showwcase Take Home challenge
+Showwcase Show Educational Background - Take Home challenge
 
 # Stats
 Unfortunately ended up making multple repos, below are stats for all

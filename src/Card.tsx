@@ -1,6 +1,5 @@
 import React from "react";
-import { Typewriter } from "react-typewriting-effect";
-import "react-typewriting-effect/dist/index.css";
+import Typewriter from "typewriter-effect";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Prop {
@@ -17,7 +16,14 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
     <div>
       {details.map((x: any, y: any) => (
         <div className="card mb-5" id={x["degree"]} key={y}>
-          <Typewriter string="🎓 Knowledge is Power" delay={80} />
+          <Typewriter
+            onComplete=""
+            options={{
+              strings: ["Knowledge", "is", "Power"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
           <h4 className="card-header g-font">Info</h4>
           <ul className="list-group">
             <li className="list-group-item g-font">

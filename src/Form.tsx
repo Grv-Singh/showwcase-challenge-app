@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import ImageUploader from "react-images-upload";
 
 interface Prop {
   getEducationDetails: (val: Object) => void;
   toggleModal: () => void;
 }
 
-const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
+const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   // state varibales
   const [universities, setUniversities] = useState([]);
   const [degrees, setDegrees] = useState([]);
@@ -63,9 +64,23 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
     }
   };
 
+  // fetch all degrees from API when initial loading of Component
+  const fetchStudy = async () => {
+    try {
+      const rawResponse = await fetch(
+        "https://showwcase-challenge.free.beeceptor.com/study"
+      );
+      const response = await rawResponse.json();
+      setDegrees(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     fetchUniversities();
     fetchDegrees();
+    fetchStudy();
   }, []);
 
   // handleChange method for all form elements
@@ -126,22 +141,22 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           type="checkbox"
           onChange={handleChange}
           value={elearn}
-          tabindex="2"
-          vaue="on"
         />
       </div>
       <div className="form-group">
         <label className="text-muted">
           Field of Study <span style={{ color: "red" }}>*</span>
         </label>
-        <input
-          type="text"
+        <Autocomplete
+          id="Degree"
+          options={degrees}
+          renderInput={(params) => (
+            <TextField {...params} label="Degree" variant="outlined" />
+          )}
           className="form-control"
-          name="fos"
           value={fos}
+          placeholder="ex: Informatics Practices"
           onChange={handleChange}
-          required
-          placeholder="e.g. - Computer Science"
         />
       </div>
       <div className="row">
@@ -223,15 +238,13 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         />
       </div>
       <div className="form-group">
-        <label className="text-muted">Media</label>
+        <label className="text-muted">Media (url):</label>
         <input
-          type="file"
-          accept=".jpeg,.jpg,.png"
-          placeholder="ex: documents, photos and presentations."
+          type="text"
+          placeholder="ex: link to documents, photos and presentations."
           className="form-control"
           value={media}
           onChange={handleChange}
-          rows={3}
         />
       </div>
       <div className="text-center">
@@ -245,4 +258,4 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   return <div>{newModalForm()}</div>;
 };
 
-export default Modal_Form;
+export default Form;

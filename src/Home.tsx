@@ -7,7 +7,7 @@ interface Props extends RouteComponentProps<any> {
   getName: () => void;
 }
 
-const Homescreen: React.FC<Props> = ({ getName, history }) => {
+const Home: React.FC<Props> = ({ getName, history }) => {
   // viable state
   const [name, setName] = useState("");
   const [disable, setDisable] = useState(false);
@@ -33,7 +33,7 @@ const Homescreen: React.FC<Props> = ({ getName, history }) => {
     e.preventDefault();
     localStorage.setItem("name", name);
     getName();
-    history.push("/mainscreen");
+    history.push("/dashboard");
     setDisable(true);
   };
 
@@ -84,8 +84,8 @@ const Homescreen: React.FC<Props> = ({ getName, history }) => {
               </button>
             </div>
             <div className="col text-right">
-              <Link to="/mainscreen" className="text-success">
-                Go to mainscreen <i className="fas fa-chevron-right"></i>
+              <Link to="/dashboard" className="text-success">
+                Go to dashboard <i className="fas fa-chevron-right"></i>
               </Link>
             </div>
           </div>
@@ -108,4 +108,4 @@ const Homescreen: React.FC<Props> = ({ getName, history }) => {
   );
 };
 
-export default Homescreen;
+export default Home;

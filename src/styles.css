@@ -1,7 +1,3 @@
-body {
-  font-family: Algerian;
-}
-
 .mymodal {
   position: fixed;
   top: 3%;
@@ -73,7 +69,7 @@ body {
   width: 30wh;
   height: 30vh;
   color: #fff;
-  background-image: url("https://wallpaperaccess.com/full/1771974.jpg");
+  background-image: url("https://ak.picdn.net/shutterstock/videos/6345773/thumb/10.jpg");
 }
 
 .card {

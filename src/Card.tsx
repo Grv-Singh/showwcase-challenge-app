@@ -14,21 +14,23 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
     <div>
       {details.map((d: any, i: any) => (
         <div className="card mb-5" id={d["degree"]} key={i}>
-          <h4 className="card-header g-font">Education Info</h4>
+          <h4 className="card-header g-font">Info</h4>
           <ul className="list-group">
             <li className="list-group-item g-font">
               Name of School: {d["name"]}
             </li>
             <li className="list-group-item g-font">Degree: {d["degree"]}</li>(
-            {(d["elearn"] = "Yes")}?<img alt="online" src="" />
-            :&nbsp;)
+            <li className="list-group-item g-font">
+              {(d["elearn"] = "Yes")}?<img alt="online" src="" />
+              :&nbsp;)
+            </li>
             <li className="list-group-item g-font">
               Field of Study: {d["fos"]}
             </li>
             <li className="list-group-item g-font">
-              Duration: {d["start"]} - {d["end"]}{" "}
+              Session: {d["start"]} - {d["end"]}{" "}
             </li>
-            <li className="list-group-item g-font">Grade: {d["grade"]}/4 </li>
+            <li className="list-group-item g-font">Grade: {d["grade"]} </li>
             <li className="list-group-item g-font">
               Description: {d["description"]}{" "}
             </li>
@@ -36,7 +38,13 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
               Activities: {d["cocur"]}{" "}
             </li>
             <li className="list-group-item g-font">
-              Media: <img alt="Media" src='{d["media"]}' />
+              Media:{" "}
+              <iframe
+                height="350px"
+                width="350px"
+                src='{d["media"]}'
+                alt="media"
+              />
             </li>
             <li className="list-group-item">
               <button

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Homescreen from "./Homescreen";
-import Mainscreen from "./Mainscreen";
+import Home from "./Home";
+import Dashboard from "./Dashboard";
 
 const Routes: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -10,7 +10,7 @@ const Routes: React.FC = () => {
     getName();
   }, []);
 
-  // getting name from homescreen and sending it to Mainscreen
+  // getting name from Home and sending it to Dashboard
   const getName = () => {
     setName(localStorage.getItem("name") || "");
   };
@@ -21,12 +21,12 @@ const Routes: React.FC = () => {
         <Route
           exact
           path="/"
-          render={(props) => <Homescreen getName={getName} {...props} />}
+          render={(props) => <Home getName={getName} {...props} />}
         />
         <Route
           exact
-          path="/mainscreen"
-          render={() => <Mainscreen user={name} />}
+          path="/dashboard"
+          render={() => <Dashboard user={name} />}
         />
       </Switch>
     </BrowserRouter>

@@ -1,3 +1,5 @@
+[<img src="https://static.wixstatic.com/media/553d6a_6c7304f930724f46a47a88893ae7bb59~mv2.png/v1/fill/w_120,h_120,al_c,q_85,usm_4.00_1.00_0.00/Logo%20(20).webp" alt="Webpage" width="350" style="vertical-align:top" />](https://www.showwcase.com)
+
 # showwcase-challenge-app
 Showwcase Show Educational Background - Take Home challenge
 

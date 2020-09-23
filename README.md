@@ -22,7 +22,7 @@ Unfortunately ended up making multple repos, below are stats for all
 ## Future Scope
 
 - Showing icon if learning was online
-- Image upload visible in Library
+- Upload media (not just urls) in mongoDB atlas / Cloud CDN like dropbox to be visible in Library.
 
 ## Languages and Tools:
 

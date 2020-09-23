@@ -244,9 +244,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       <div className="text-center">
         <button className="btn btn-primary">Save</button>
         &nbsp;
-        <button className="btn btn-primary" onClick={handleClick}>
-          Reset
-        </button>
+        <button className="btn btn-primary">Reset</button>
       </div>
     </form>
   );

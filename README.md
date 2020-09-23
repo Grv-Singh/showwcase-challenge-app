@@ -19,6 +19,10 @@ Unfortunately ended up making multple repos, below are stats for all
 - 📩 Hipo (University) and Self made - Degree and Field of Study APIs used to autocomplete
 - 🥅 All relevant details mentioned and some picked from LinkedIn to support educational background
 
+## Future Scope
+
+- Showing icon if learning was online
+- Image upload visible in Library
 
 ## Languages and Tools:
 

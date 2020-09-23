@@ -12,6 +12,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   // state varibales
   const [universities, setUniversities] = useState([]);
   const [degrees, setDegrees] = useState([]);
+  const [study, setStudy] = useState([]);
   const [name, setName] = useState<any>({});
   const [values, setValues] = useState<any>({
     degree: "",
@@ -64,14 +65,14 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
     }
   };
 
-  // fetch all degrees from API when initial loading of Component
+  // fetch all study fields from API when initial loading of Component
   const fetchStudy = async () => {
     try {
       const rawResponse = await fetch(
         "https://showwcase-challenge.free.beeceptor.com/study"
       );
       const response = await rawResponse.json();
-      setDegrees(response);
+      setStudy(response);
     } catch (error) {
       console.log(error);
     }
@@ -148,10 +149,10 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           Field of Study <span style={{ color: "red" }}>*</span>
         </label>
         <Autocomplete
-          id="Degree"
-          options={degrees}
+          id="Study"
+          options={study}
           renderInput={(params) => (
-            <TextField {...params} label="Degree" variant="outlined" />
+            <TextField {...params} label="Study Field" variant="outlined" />
           )}
           className="form-control"
           value={fos}

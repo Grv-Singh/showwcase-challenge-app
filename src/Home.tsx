@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "./Layout";
 import { RouteComponentProps, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Properties of all interface components
 interface Props extends RouteComponentProps<any> {

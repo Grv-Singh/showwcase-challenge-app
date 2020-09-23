@@ -5,6 +5,7 @@ import "./styles.css";
 import Form from "./Form";
 import { HashLink as Link } from "react-router-hash-link";
 import Card from "./Card";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Props {
   user: string;

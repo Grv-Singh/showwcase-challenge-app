@@ -1,6 +1,7 @@
 import React from "react";
 import { Typewriter } from "react-typewriting-effect";
 import "react-typewriting-effect/dist/index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Prop {
   details: any;

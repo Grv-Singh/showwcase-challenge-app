@@ -102,7 +102,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           onChange={(event, newValue) => {
             setName(newValue);
           }}
-          freeSolo
         />
       </div>
       <div className="form-group">
@@ -117,7 +116,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           )}
           value={degree}
           onChange={handleChange}
-          freeSolo
         />
       </div>
       <div className="form-group">
@@ -128,7 +126,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           type="checkbox"
           onChange={handleChange}
           value={elearn}
-          freeSolo
           tabindex="2"
           vaue="on"
         />

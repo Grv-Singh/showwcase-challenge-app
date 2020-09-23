@@ -1,5 +1,5 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 
 interface Prop {
   details: any;
@@ -15,13 +15,13 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
     <div>
       {details.map((d: any, i: any) => (
         <div className="card mb-5" id={d["degree"]} key={i}>
-          <Typewriter
+          {/* <Typewriter
             options={{
               strings: ["Knowledge", "is", "Power"],
               autoStart: true,
               loop: true,
             }}
-          />
+          /> */}
           <h4 className="card-header g-font">Info</h4>
           <ul className="list-group">
             <li className="list-group-item g-font">

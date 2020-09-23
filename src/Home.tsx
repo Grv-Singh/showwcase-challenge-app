@@ -53,7 +53,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
               <input
                 className="form-control"
                 placeholder="Type your name here and click 'enter' below to begin!"
-                readOnly
+                style="display:none"
               />
             ) : (
               <input
@@ -66,10 +66,9 @@ const Home: React.FC<Props> = ({ getName, history }) => {
           </div>
           {disable ? (
             <button
-              //   type="sumbit"
               className="btn btn-outline-primary mb-3"
               disabled
-              style={{ cursor: "not-allowed" }}
+              style={{ cursor: "not-allowed", display: none }}
             >
               Enter
             </button>
@@ -86,7 +85,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
             </div>
             <div className="col text-right">
               <Link to="/dashboard" className="text-success">
-                Go to dashboard <i className="fas fa-chevron-right"></i>
+                Continue to dashboard <i className="fas fa-chevron-right"></i>
               </Link>
             </div>
           </div>
@@ -98,11 +97,12 @@ const Home: React.FC<Props> = ({ getName, history }) => {
   return (
     <Layout
       title="Showwcase"
-      className="container-fluid col-md-6 offset-md-3"
-      description="The World's Tech Community!"
+      className="container-fluid col-md-6 offset-md-3 font-black"
+      description="&nbsp; The World's Tech Community!"
     >
       <h3 style={{ marginBottom: "50px" }}>
-        Hi there! Welcome to your education showcase.
+        Hi {`${localStorage.getItem("name")} ?`}! Welcome to your education
+        showcase.
       </h3>
       {showForm()}
     </Layout>

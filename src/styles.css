@@ -44,7 +44,7 @@
 .form-control,
 .card,
 .list-group {
-  border-radius: 0px;
+  border-radius: 6px;
 }
 
 /**

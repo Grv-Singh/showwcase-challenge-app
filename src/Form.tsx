@@ -127,9 +127,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         <Autocomplete
           id="Degree"
           options={degrees}
-          renderInput={(params) => (
-            <TextField {...params} label="Degree" variant="outlined" />
-          )}
+          renderInput={(params) => <TextField {...params} variant="outlined" />}
           value={degree}
           onChange={handleChange}
         />
@@ -151,9 +149,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         <Autocomplete
           id="study"
           options={study}
-          renderInput={(params) => (
-            <TextField {...params} label="study" variant="outlined" />
-          )}
+          renderInput={(params) => <TextField {...params} variant="outlined" />}
           value={fos}
           onChange={handleChange}
         />
@@ -248,7 +244,9 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       <div className="text-center">
         <button className="btn btn-primary">Save</button>
         &nbsp;
-        <button className="btn btn-primary">Reset</button>
+        <button className="btn btn-primary" onClick={handleClick}>
+          Reset
+        </button>
       </div>
     </form>
   );

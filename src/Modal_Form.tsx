@@ -87,7 +87,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
     <form
       className="mb-3"
       onSubmit={handleSubmit}
-      enctype="multipart/form-data"
       accept-charset="UTF-8"
       id="education"
     >
@@ -116,7 +115,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           renderInput={(params) => (
             <TextField {...params} label="Degree" variant="outlined" />
           )}
-          name="degree"
           value={degree}
           onChange={handleChange}
           freeSolo
@@ -129,7 +127,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           id="Online"
           type="checkbox"
           onChange={handleChange}
-          name="elearn"
           value={elearn}
           freeSolo
           tabindex="2"
@@ -235,7 +232,6 @@ const Modal_Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           accept=".jpeg,.jpg,.png"
           placeholder="ex: documents, photos and presentations."
           className="form-control"
-          name="media"
           value={media}
           onChange={handleChange}
           rows={3}

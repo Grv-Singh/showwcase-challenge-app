@@ -40,7 +40,7 @@
 */
 
 .btn,
-.jumbotron,
+.logo,
 .form-control,
 .card,
 .list-group {
@@ -48,24 +48,24 @@
 }
 
 /**
-* put jumbotron text vertical center
+* put logo text vertical center
 */
 
-.jumbotron h2 {
+.logo h2 {
   margin-top: -3px;
 }
 
 @media only screen and (max-width: 600px) {
-  .jumbotron h2 {
+  .logo h2 {
     margin-top: 30px;
   }
 }
 
 /**
-*   jumbotron animation
+*   logo animation
 */
 
-.jumbotron {
+.logo {
   width: 30wh;
   height: 30vh;
   color: #fff;

@@ -98,7 +98,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
     <Layout
       title="Showwcase"
       className="container-fluid col-md-6 offset-md-3"
-      description="All-in-one platform built for Tech Workers"
+      description="The World's Tech Community!"
     >
       <h3 style={{ marginBottom: "50px" }}>
         Hi there! Welcome to your education showcase.

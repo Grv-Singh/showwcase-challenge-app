@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect/dist/core";
 
 interface Prop {
   details: any;
@@ -14,6 +15,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
     <div>
       {details.map((d: any, i: any) => (
         <div className="card mb-5" id={d["degree"]} key={i}>
+          <h3 id="typewriter" className="list-group"></h3>
           <h4 className="card-header g-font">Info</h4>
           <ul className="list-group">
             <li className="list-group-item g-font">
@@ -21,7 +23,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
             </li>
             <li className="list-group-item g-font">Degree: {d["degree"]}</li>(
             <li className="list-group-item g-font">
-              {(d["elearn"] = "Yes")}?<img alt="online" src="" />
+              {(d["elearn"] = "Yes")}?<img src="" />
               :&nbsp;)
             </li>
             <li className="list-group-item g-font">
@@ -38,13 +40,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
               Activities: {d["cocur"]}{" "}
             </li>
             <li className="list-group-item g-font">
-              Media:{" "}
-              <iframe
-                height="350px"
-                width="350px"
-                src='{d["media"]}'
-                alt="media"
-              />
+              Media: <iframe height="350px" width="350px" src='{d["media"]}' />
             </li>
             <li className="list-group-item">
               <button
@@ -60,5 +56,10 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
     </div>
   );
 };
+
+new Typewriter("#typewriter", {
+  strings: ["Knowledge", "is", "Power"],
+  autoStart: true,
+});
 
 export default Card;

@@ -14,7 +14,7 @@ Unfortunately ended up making multple repos, below are stats for all
 
 ## Highlights
 
-- ✅ Linting checked at commits
+- ✅ Linting checked at commits using Husky
 - 🏳 Typescript based
 - 📩 Hipo (University) and Self made - Degree and Field of Study APIs used to autocomplete
 - 🥅 All relevant details mentioned and some picked from LinkedIn to support educational background

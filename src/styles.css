@@ -123,7 +123,8 @@
 }
 
 .list-group-item {
-  background-color: lightyellow;
+  border: none;
+  background-color: rgb(241, 244, 253);
 }
 
 .avatar {

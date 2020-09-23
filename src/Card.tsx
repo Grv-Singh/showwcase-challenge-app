@@ -18,29 +18,27 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
           <h3>Knowledge is Power</h3>
           <h4 className="card-header g-font">Info</h4>
           <ul className="list-group">
+            <li className="list-group-item g-font">🏫 School: {x["name"]}</li>
+            <li className="list-group-item g-font">🎓 Degree: {x["degree"]}</li>
             <li className="list-group-item g-font">
-              Name of School: {x["name"]}
-            </li>
-            <li className="list-group-item g-font">Degree: {x["degree"]}</li>(
-            <li className="list-group-item g-font">
-              {(x["elearn"] = "Yes")}?<img src="" />
-              :&nbsp;)
+              🌐 E-Learning: {x["elearn"]}
             </li>
             <li className="list-group-item g-font">
-              Field of Study: {x["fos"]}
+              ✔ Field of Study: {x["fos"]}
             </li>
             <li className="list-group-item g-font">
-              Session: {x["start"]} - {x["end"]}{" "}
+              ⏳ Session: {x["start"]} - {x["end"]}
             </li>
-            <li className="list-group-item g-font">Grade: {x["grade"]} </li>
+            <li className="list-group-item g-font">💯 Grade: {x["grade"]}</li>
             <li className="list-group-item g-font">
-              Description: {x["description"]}{" "}
-            </li>
-            <li className="list-group-item g-font">
-              Activities: {x["cocur"]}{" "}
+              🗞 Description: {x["description"]}
             </li>
             <li className="list-group-item g-font">
-              Media: <iframe height="350px" width="350px" src='{x["media"]}' />
+              🎭 Activities: {x["cocur"]}
+            </li>
+            <li className="list-group-item g-font">
+              🎞 Media:{" "}
+              <iframe height="350px" width="350px" src='{x["media"]}' />
             </li>
             <li className="list-group-item">
               <button

@@ -149,14 +149,12 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           Field of Study <span style={{ color: "red" }}>*</span>
         </label>
         <Autocomplete
-          id="Study"
+          id="study"
           options={study}
           renderInput={(params) => (
-            <TextField {...params} label="Study Field" variant="outlined" />
+            <TextField {...params} label="study" variant="outlined" />
           )}
-          className="form-control"
           value={fos}
-          placeholder="ex: Informatics Practices"
           onChange={handleChange}
         />
       </div>
@@ -198,7 +196,6 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           />
         </div>
       </div>
-
       <div className="form-group">
         <label className="text-muted">
           Grade (1.0 - 4.0) <span style={{ color: "red" }}>*</span>

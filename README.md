@@ -17,7 +17,7 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 - ✅ Linting checked at commits using Husky
 - 🏳 Typescript based
 - 📩 Hipo (University) and Self made - Degree and Field of Study APIs used to autocomplete
-- 🥅 All relevant details mentioned and some picked from LinkedIn to support educational background
+- 🥅 All relevant educational details are mentioned and some picked from LinkedIn to support educational background
 
 ## Future Scope
 

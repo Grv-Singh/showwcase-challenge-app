@@ -24,6 +24,7 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 <br>
 [![Screenshot-2020-09-24-074926.jpg](https://i.postimg.cc/J7HVMZzS/Screenshot-2020-09-24-074926.jpg)](https://postimg.cc/z3NPkLWk)
 
+# NOTE : API for Degree & Field of study autocomplete, bypassed no. of requests, in a free subscripition
 
 ## Future Scope
 

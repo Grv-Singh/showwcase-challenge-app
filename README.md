@@ -21,8 +21,7 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 - ⚠ The University API doesn't run due to latest CORS policy
 
 [<img src="https://i.postimg.cc/p5PGV7xS/Screenshot-2020-09-24-074643.jpg" alt="Webpage" style="vertical-align:top" />]
-
-[url=https://postimg.cc/z3NPkLWk][img]https://i.postimg.cc/z3NPkLWk/Screenshot-2020-09-24-074926.jpg[/img][/url]
+[<img src="https://i.postimg.cc/z3NPkLWk/Screenshot-2020-09-24-074926.jpg" alt="Webpage" style="vertical-align:top" />]
 
 
 ## Future Scope

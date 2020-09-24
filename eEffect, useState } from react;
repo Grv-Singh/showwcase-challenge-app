@@ -1,9 +1,0 @@
-.babelrc
-.eslintrc
-.storybook/config.js
-LICENSE
-README.md
-launch.json
-src/Form.tsx
-src/styles.css
-tslint.json

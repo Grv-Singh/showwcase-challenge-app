@@ -18,10 +18,17 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 - 🏳 Typescript based
 - 📩 Hipo (University) and Self made - Degree and Field of Study APIs used to autocomplete
 - 🥅 All relevant educational details are mentioned and some picked from LinkedIn to support educational background
+- ⚠ The University API doesn't run due to latest CORS policy
+
+[![Screenshot-2020-09-24-074643.jpg](https://i.postimg.cc/Znd1HtQJ/Screenshot-2020-09-24-074643.jpg)](https://postimg.cc/p5PGV7xS)
+<br>
+[![Screenshot-2020-09-24-074926.jpg](https://i.postimg.cc/J7HVMZzS/Screenshot-2020-09-24-074926.jpg)](https://postimg.cc/z3NPkLWk)
+
 
 ## Future Scope
 
 - Showing icon if learning was online
+- Enabe API call over http bypassing CORS policy
 - Upload media (not just urls) in mongoDB atlas / Cloud CDN like dropbox to be visible in Library.
 
 ## Languages and Tools:

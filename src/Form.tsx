@@ -108,7 +108,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
     >
       <div className="form-group">
         <label className="text-muted">
-          Name of School <span style={{ color: "red" }}>*</span>
+          🏫 Name of School <span style={{ color: "red" }}>*</span>
         </label>
         <Autocomplete
           id="School"
@@ -122,7 +122,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       </div>
       <div className="form-group">
         <label className="text-muted">
-          Degree <span style={{ color: "red" }}>*</span>
+          🎓 Degree <span style={{ color: "red" }}>*</span>
         </label>
         <Autocomplete
           id="Degree"
@@ -133,7 +133,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         />
       </div>
       <div className="form-group">
-        <label className="text-muted">E-Learning</label>
+        <label className="text-muted">🌐 E-Learning</label>
         &nbsp;
         <input
           id="Online"
@@ -144,7 +144,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       </div>
       <div className="form-group">
         <label className="text-muted">
-          Field of Study <span style={{ color: "red" }}>*</span>
+          🔎 Field of Study <span style={{ color: "red" }}>*</span>
         </label>
         <Autocomplete
           id="study"
@@ -157,7 +157,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       <div className="row">
         <div className="form-group col">
           <label className="text-muted">
-            Start year <span style={{ color: "red" }}>*</span>
+            🎉 Start year <span style={{ color: "red" }}>*</span>
           </label>
           <input
             type="date"
@@ -170,7 +170,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </div>
         <div className="form-group col">
           <label className="text-muted">
-            End year (expected) <span style={{ color: "red" }}>*</span>
+            🔚 End year (expected) <span style={{ color: "red" }}>*</span>
           </label>
           <input
             type="date"
@@ -182,7 +182,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           />
         </div>
         <div className="form-group col">
-          <label className="text-muted">Ongoing</label>
+          <label className="text-muted">⏳ Ongoing</label>
           <input
             type="checkbox"
             className="form-control"
@@ -194,7 +194,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       </div>
       <div className="form-group">
         <label className="text-muted">
-          Grade (1.0 - 4.0) <span style={{ color: "red" }}>*</span>
+          💯 Grade (1.0 - 4.0) <span style={{ color: "red" }}>*</span>
         </label>
         <input
           type="number"
@@ -209,7 +209,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         />
       </div>
       <div className="form-group">
-        <label className="text-muted">Activities and Societies</label>
+        <label className="text-muted">🎭 Activities and Societies</label>
         <textarea
           placeholder="ex: Experiences in clubs & events"
           className="form-control"
@@ -220,7 +220,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         />
       </div>
       <div className="form-group">
-        <label className="text-muted">Description</label>
+        <label className="text-muted">📄 Description</label>
         <textarea
           placeholder="ex: Experiences with your University / Field of
           Study"
@@ -232,7 +232,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         />
       </div>
       <div className="form-group">
-        <label className="text-muted">Media (url):</label>
+        <label className="text-muted">🎞 Media (url):</label>
         <input
           type="text"
           placeholder="ex: link to documents, photos and presentations."
@@ -242,9 +242,9 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         />
       </div>
       <div className="text-center">
-        <button className="btn btn-primary">Save</button>
+        <button className="btn btn-primary">➕ Save</button>
         &nbsp;
-        <button className="btn btn-primary">Reset</button>
+        <button className="btn btn-primary">⛔ Reset</button>
       </div>
     </form>
   );

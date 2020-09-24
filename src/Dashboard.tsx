@@ -70,7 +70,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
               smooth
               key={i}
               to={`/dashboard/#${ed["degree"]}`}
-            >{`${ed["degree"]} @ ${ed["name"]}`}</Link>
+            >{`${ed["degree"]}, ${ed["name"]} | ${ed["start"]} - ${ed["and"]} `}</Link>
           </li>
         ))}
       </ul>
@@ -81,7 +81,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   const goBack = (
     <div className="col-sm-12 mb-3">
       <Link to="/" className="text-success">
-        <i className="fas fa-chevron-left"></i> Home
+        <i className="fas fa-chevron-left"></i> 🏠 Home
       </Link>
     </div>
   );
@@ -90,7 +90,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   const addNewEducationButton = (
     <div className="col-sm-12 text-center mb-5">
       <button className="btn btn-primary g-font" onClick={toggleModal}>
-        Add new education
+        ➕ New education
       </button>
     </div>
   );
@@ -99,7 +99,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   return (
     <Layout
       className="container-fluid"
-      title={`Welcome to, ${user}'s education page.`}
+      title={`👏 Welcome to, ${user}'s education page.`}
       description="Add education details"
     >
       <div className="row">
@@ -120,7 +120,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
           closeTimeoutMS={500}
         >
           <div className="text-center" style={{ fontWeight: "bold" }}>
-            Education Form
+            🏫 Education Form
           </div>
           <Form
             toggleModal={toggleModal}

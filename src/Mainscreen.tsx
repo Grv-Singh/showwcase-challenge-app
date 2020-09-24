@@ -81,7 +81,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   const goBack = (
     <div className="col-sm-12 mb-3">
       <Link to="/" className="text-success">
-        <i className="fas fa-chevron-left"></i> Home
+        <i className="fas fa-chevron-left"></i> 🏠 Home
       </Link>
     </div>
   );
@@ -90,7 +90,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   const addNewEducationButton = (
     <div className="col-sm-12 text-center mb-5">
       <button className="btn btn-primary g-font" onClick={toggleModal}>
-        Add new education
+        ➕ New education
       </button>
     </div>
   );

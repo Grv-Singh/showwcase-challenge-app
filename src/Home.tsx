@@ -53,7 +53,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
               <input
                 className="form-control"
                 placeholder="Type your name here and click 'enter' below to begin!"
-                style="display:none"
+                style={{ display: "none" }}
               />
             ) : (
               <input
@@ -68,7 +68,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
             <button
               className="btn btn-outline-primary mb-3"
               disabled
-              style={{ cursor: "not-allowed", display: none }}
+              style={{ cursor: "not-allowed", display: "none" }}
             >
               Enter
             </button>
@@ -101,8 +101,9 @@ const Home: React.FC<Props> = ({ getName, history }) => {
       description="&nbsp; The World's Tech Community!"
     >
       <h3 style={{ marginBottom: "50px" }}>
-        Hi {`${localStorage.getItem("name")} ?`}! Welcome to your education
-        showcase.
+        Hi{" "}
+        {`${localStorage.getItem("name") ? localStorage.getItem("name") : ""}`}!
+        Welcome to your education showcase.
       </h3>
       {showForm()}
     </Layout>

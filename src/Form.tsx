@@ -43,7 +43,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   const fetchUniversities = async () => {
     try {
       const rawResponse = await fetch(
-        "https://showwcase-challenge-university.free.beeceptor.com/"
+        "https://showwcase-challenge-university.free.beeceptor.com/search"
       );
       const response = await rawResponse.json();
       setUniversities(response);

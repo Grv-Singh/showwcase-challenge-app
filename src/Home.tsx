@@ -103,7 +103,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
       <h3 style={{ marginBottom: "50px" }}>
         Hi{" "}
         {`${localStorage.getItem("name") ? localStorage.getItem("name") : ""}`}!
-        Welcome to your education showcase.
+        Welcome to your <span style="typewriter">Education Showcase</span>.
       </h3>
       {showForm()}
     </Layout>

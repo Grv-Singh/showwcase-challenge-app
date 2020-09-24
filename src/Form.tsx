@@ -71,7 +71,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         "https://showwcase-challenge.free.beeceptor.com/study"
       );
       const response = await rawResponse.json();
-      setStudy(response);
+      setFos(response);
     } catch (error) {
       console.log(error);
     }

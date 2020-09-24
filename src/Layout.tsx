@@ -30,7 +30,7 @@ const Layout: React.FC<Props> = ({
       <br />
       <br />
       <br />
-      <h2 style={{ color: "black" }}>{title}</h2>
+      <h2 style={{ color: "black", margin-left: "30px" }}>{title}</h2>
       <p className="lead">{description}</p>
       <div className={className}>{children}</div>
     </div>

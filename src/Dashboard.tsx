@@ -70,7 +70,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
               smooth
               key={i}
               to={`/dashboard/#${ed["degree"]}`}
-            >{`${ed["degree"]}, ${ed["name"]} | ${ed["start"]} - ${ed["and"]} `}</Link>
+            >{`${ed["degree"]}, ${ed["name"]} ⏳ ${ed["start"]} - ${ed["end"]} `}</Link>
           </li>
         ))}
       </ul>

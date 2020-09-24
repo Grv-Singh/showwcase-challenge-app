@@ -96,7 +96,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
 
   return (
     <Layout
-      title="Showwcase"
+      title=""
       className="container-fluid col-md-6 offset-md-3 font-black"
       description="&nbsp; The World's Tech Community!"
     >

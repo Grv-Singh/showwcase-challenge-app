@@ -24,7 +24,7 @@ const Layout: React.FC<Props> = ({
           <img
             alt="logo"
             src={url}
-            style={{ position: "relative", left: "9px" }}
+            style={{ position: "relative", left: "9px", top: "11px" }}
           />{" "}
           {title}
         </h2>

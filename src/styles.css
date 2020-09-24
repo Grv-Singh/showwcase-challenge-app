@@ -69,42 +69,7 @@
   width: 30wh;
   height: 30vh;
   color: #fff;
-}
-
-@-webkit-keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@-moz-keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background-image: url("/header.svg");
 }
 
 .card {
@@ -118,10 +83,9 @@
 .lead {
   color: #000;
 }
-/* google font spartan for product details */
 
 .g-font {
-  font-family: "Spartan", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
 }
 

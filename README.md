@@ -3,6 +3,8 @@
 # Showwcase React Challenge
 User Form & dashboard for Educational Background - Take Home challenge
 
+# NOTE : API bypassed no. of requests, in a free subscripition
+
 # Stats
 There is **now a single Repo** but earlier, unfortunately did blunder in making multple repos. For sake of version control history, below are stats for them ⤵
 

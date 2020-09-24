@@ -30,7 +30,6 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   const {
     degree,
     elearn,
-    fos,
     start,
     end,
     grade,

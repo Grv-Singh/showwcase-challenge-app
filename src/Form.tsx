@@ -39,11 +39,18 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
     media,
   } = values;
 
+  const requestHeaders: HeadersInit = new Headers();
+  requestHeaders.set("Content-Type", "application/json");
+
   // fetch all universities from API when initial loading of Component
   const fetchUniversities = async () => {
     try {
       const rawResponse = await fetch(
-        "http://universities.hipolabs.com/search"
+        "https://showwcase-challenge-university.free.beeceptor.com/",
+        {
+          method: "POST",
+          headers: requestHeaders,
+        }
       );
       const response = await rawResponse.json();
       setUniversities(response);

@@ -24,9 +24,11 @@ const Layout: React.FC<Props> = ({
           className="avatar"
           alt="logo"
           src={url}
-          style={{ position: "relative", left: "9px", top: "11px" }}
+          style={{ position: "relative", left: "26px", top: "24px" }}
         />{" "}
-        <h2>{title}</h2>
+        <br />
+        <h2 style={{ color: "black" }}>{title}</h2>
+        <br />
         <p className="lead">{description}</p>
       </div>
       <div className={className}>{children}</div>

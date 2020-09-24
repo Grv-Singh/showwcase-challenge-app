@@ -99,10 +99,13 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   return (
     <Layout
       className="container-fluid"
-      title={`Welcome to, ${user}'s education page.`}
-      description="Add education details"
+      title={`👏 Welcome to, ${user}'s education page.`}
+      description="➕ Add education details"
     >
       <div className="row">
+        <br />
+        <br />
+        <br />
         {goBack}
         {addNewEducationButton}
         <div className="col-sm-12 col-md-3">

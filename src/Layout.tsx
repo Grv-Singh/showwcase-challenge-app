@@ -26,11 +26,9 @@ const Layout: React.FC<Props> = ({
           src={url}
           style={{ position: "relative", left: "26px", top: "24px" }}
         />{" "}
-        <br />
-        <h2 style={{ color: "black" }}>{title}</h2>
-        <br />
-        <p className="lead">{description}</p>
       </div>
+      <h2 style={{ color: "black" }}>{title}</h2>
+      <p className="lead">{description}</p>
       <div className={className}>{children}</div>
     </div>
   );

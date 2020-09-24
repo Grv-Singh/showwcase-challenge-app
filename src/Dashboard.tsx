@@ -91,7 +91,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
 
   // add new education info
   const addNewEducationButton = (
-    <div className="col-sm-12 text-center mb-5">
+    <div className="col-sm-12 offset-4 mb-5">
       <button className="btn btn-primary g-font" onClick={toggleModal}>
         ➕ New education
       </button>

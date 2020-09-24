@@ -99,8 +99,8 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   return (
     <Layout
       className="container-fluid"
-      title={`👏 Welcome to, ${user}'s education page.`}
-      description=" ➕ Add education details"
+      title={`  👏 Welcome to, ${user}'s education page.`}
+      description="  ➕ Add education details"
     >
       <div className="row">
         <br />

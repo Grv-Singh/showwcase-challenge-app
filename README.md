@@ -28,7 +28,6 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 ## Future Scope
 
 - Showing icon if learning was online
-- Enabe API call over http bypassing CORS policy
 - Upload media (not just urls) in mongoDB atlas / Cloud CDN like dropbox to be visible in Library.
 
 ## Languages and Tools:

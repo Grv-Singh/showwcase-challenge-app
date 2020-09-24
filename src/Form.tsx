@@ -12,7 +12,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   // state varibales
   const [universities, setUniversities] = useState([]);
   const [degrees, setDegrees] = useState([]);
-  const [study, setStudy] = useState([]);
+  const [fos, setFos] = useState([]);
   const [name, setName] = useState<any>({});
   const [values, setValues] = useState<any>({
     degree: "",
@@ -66,7 +66,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   };
 
   // fetch all study fields from API when initial loading of Component
-  const fetchStudy = async () => {
+  const fetchFos = async () => {
     try {
       const rawResponse = await fetch(
         "https://showwcase-challenge.free.beeceptor.com/study"
@@ -81,7 +81,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   useEffect(() => {
     fetchUniversities();
     fetchDegrees();
-    fetchStudy();
+    fetchFos();
   }, []);
 
   // handleChange method for all form elements
@@ -127,9 +127,11 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         <Autocomplete
           id="Degree"
           options={degrees}
+          getOptionLabel={(u) => u["degree"]}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          value={degree}
-          onChange={handleChange}
+          onChange={(event, newValue) => {
+            setDegrees(newValue);
+          }}
         />
       </div>
       <div className="form-group">
@@ -148,10 +150,12 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </label>
         <Autocomplete
           id="study"
-          options={study}
+          options={fos}
+          getOptionLabel={(u) => u["fos"]}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          value={fos}
-          onChange={handleChange}
+          onChange={(event, newValue) => {
+            setFos(newValue);
+          }}
         />
       </div>
       <div className="row">
@@ -237,6 +241,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           type="text"
           placeholder="ex: link to documents, photos and presentations."
           className="form-control"
+          name="media"
           value={media}
           onChange={handleChange}
         />

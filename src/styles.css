@@ -121,7 +121,7 @@
   }
 }
 
-.typewriter h3 {
+.typewriter {
   color: bisque;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */

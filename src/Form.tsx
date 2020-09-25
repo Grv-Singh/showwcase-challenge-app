@@ -118,7 +118,6 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           id="Degree"
           options={degrees}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          onChange={handleChange}
           value={degrees}
         />
       </div>
@@ -128,7 +127,6 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         <Checkbox
           id="Online"
           inputProps={{ "aria-label": "uncontrolled-checkbox" }}
-          onChange={handleChange}
           value={elearn}
         />
       </div>
@@ -140,7 +138,6 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           id="study"
           options={fos}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          onChange={handleChange}
           value={fos}
         />
       </div>

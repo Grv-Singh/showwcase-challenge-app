@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Iframe from "react-iframe";
 
 interface Prop {
   details: any;
@@ -38,7 +39,12 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
             </li>
             <li className="list-group-item g-font">
               🎞 Media:{" "}
-              <iframe height="200px" width="350px" src={{x["media"]}} />
+              <Iframe
+                url={{x["media"]}}
+                width="200px"
+                height="200px"
+                id="media"
+              />
             </li>
             <li className="list-group-item">
               <button

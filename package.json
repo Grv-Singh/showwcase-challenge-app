@@ -27,6 +27,7 @@
     "react-background-animation": "^1.0.1",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
+    "react-iframe": "^1.8.0",
     "react-images-upload": "^1.2.8",
     "react-modal": "^3.11.2",
     "react-particles-js": "^3.3.0",

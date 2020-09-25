@@ -15,9 +15,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   const [fos, setFos] = useState([]);
   const [name, setName] = useState<any>({});
   const [values, setValues] = useState<any>({
-    degree: "",
     elearn: "",
-    fos: "",
     start: "",
     end: "",
     grade: "",
@@ -27,16 +25,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   });
 
   // destructuring state variables
-  const {
-    degree,
-    elearn,
-    start,
-    end,
-    grade,
-    cocur,
-    description,
-    media,
-  } = values;
+  const { elearn, start, end, grade, cocur, description, media } = values;
 
   // fetch all universities from API when initial loading of Component
   const fetchUniversities = async () => {
@@ -92,7 +81,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     values["name"] = name["name"];
-    values["uniqueKey"] = values["name"] + values["degree"];
+    values["uniqueKey"] = values["name"] + values["degrees"];
     getEducationDetails(values);
     toggleModal();
   };
@@ -117,6 +106,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           onChange={(event, newValue) => {
             setName(newValue);
           }}
+          freeSolo
         />
       </div>
       <div className="form-group">
@@ -125,8 +115,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </label>
         <Autocomplete
           id="Degree"
-          options={degrees}
-          getOptionLabel={(u) => u["degree"]}
+          options={degrees.map((option) => option.title)}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
           onChange={(event, newValue) => {
             setDegrees(newValue);
@@ -149,8 +138,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </label>
         <Autocomplete
           id="study"
-          options={fos}
-          getOptionLabel={(u) => u["fos"]}
+          options={fos.map((option) => option.title)}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
           onChange={(event, newValue) => {
             setFos(newValue);

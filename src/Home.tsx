@@ -51,12 +51,14 @@ const Home: React.FC<Props> = ({ getName, history }) => {
           <div className="form-group">
             {disable ? (
               <input
+                id="username"
                 className="form-control"
                 placeholder="Type your name here and click 'enter' below to begin!"
                 style={{ display: "none" }}
               />
             ) : (
               <input
+                id="username"
                 className="form-control"
                 value={name}
                 onChange={handleChange}
@@ -103,7 +105,7 @@ const Home: React.FC<Props> = ({ getName, history }) => {
       <h3 style={{ marginBottom: "50px" }}>
         Hi{" "}
         {`${localStorage.getItem("name") ? localStorage.getItem("name") : ""}`}!
-        Welcome to your <span style="typewriter">Education Showcase</span>.
+        Welcome to your <span className="typewriter">Education Showcase</span>
       </h3>
       {showForm()}
     </Layout>

@@ -71,7 +71,9 @@ const Dashboard: React.FC<Props> = ({ user }) => {
               key={i}
               to={`/dashboard/#${ed["degree"]}`}
             >
-              <span style={{background-color:"yellow"}}>{`${ed["start"]} - ${ed["end"]}`}</span>{" "}
+              <span
+                style={{ backgroundColor: "yellow" }}
+              >{`${ed["start"]} - ${ed["end"]}`}</span>{" "}
               {`${ed["degree"]}, ${ed["name"]}`}
             </Link>
           </li>

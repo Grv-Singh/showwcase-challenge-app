@@ -12,8 +12,8 @@ interface Prop {
 const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   // state varibales
   const [universities, setUniversities] = useState([]);
-  const [degrees, setDegrees] = useState<any>([]);
-  const [fos, setFos] = useState<any>([]);
+  const [degrees, setDegrees] = useState([]);
+  const [fos, setFos] = useState([]);
   const [name, setName] = useState<any>({});
   const [values, setValues] = useState<any>({
     elearn: "",
@@ -118,7 +118,8 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           id="Degree"
           options={degrees}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          value={degrees}
+          onChange={handleChange}
+          freeSolo
         />
       </div>
       <div className="form-group">
@@ -138,7 +139,8 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           id="study"
           options={fos}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          value={fos}
+          onChange={handleChange}
+          freeSolo
         />
       </div>
       <div className="row">

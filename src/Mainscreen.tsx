@@ -71,7 +71,7 @@ const Dashboard: React.FC<Props> = ({ user }) => {
               className="g-font"
               smooth
               key={i}
-              to={`/dashboard/#${ed["degree"]}`}
+              to={`/dashboard/#${ed["name"]}`}
             >{`${ed["degree"]} @ ${ed["name"]}`}</Link>
           </li>
         ))}

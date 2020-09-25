@@ -15,14 +15,12 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
   return (
     <div>
       {details.map((x: any, y: any) => (
-        <div className="card mb-5" id={x["degree"]} key={y}>
+        <div className="card mb-5" id={x["name"]} key={y}>
           <h3 className="typewriter">&nbsp; Knowledge empowers you</h3>
           <h4 className="card-header g-font">Info</h4>
           <ul className="list-group">
             <li className="list-group-item g-font">🏫 School: {x["name"]}</li>
-            <li className="list-group-item g-font">
-              🎓 Degree: {x["degrees"]}
-            </li>
+            <li className="list-group-item g-font">🎓 Degree: {x["degree"]}</li>
             <li className="list-group-item g-font">
               🌐 E-Learning: {x["elearn"]}
             </li>

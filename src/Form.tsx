@@ -12,7 +12,7 @@ interface Prop {
 const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   // state varibales
   const [universities, setUniversities] = useState([]);
-  const [degrees, setDegrees] = useState([]);
+  const [degree, setDegree] = useState([]);
   const [fos, setFos] = useState([]);
   const [name, setName] = useState<any>({});
   const [values, setValues] = useState<any>({
@@ -41,14 +41,14 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
     }
   };
 
-  // fetch all degrees from API when initial loading of Component
-  const fetchDegrees = async () => {
+  // fetch all degree from API when initial loading of Component
+  const fetchDegree = async () => {
     try {
       const rawResponse = await fetch(
         "https://showwcase-challenge.free.beeceptor.com/degrees"
       );
       const response = await rawResponse.json();
-      setDegrees(response);
+      setDegree(response);
     } catch (error) {
       console.log(error);
     }
@@ -69,7 +69,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
 
   useEffect(() => {
     fetchUniversities();
-    fetchDegrees();
+    fetchDegree();
     fetchFos();
   }, []);
 
@@ -82,7 +82,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     values["name"] = name["name"];
-    values["uniqueKey"] = values["name"] + values["degrees"];
+    values["uniqueKey"] = values["name"] + values["degree"];
     getEducationDetails(values);
     toggleModal();
   };
@@ -116,7 +116,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </label>
         <Autocomplete
           id="Degree"
-          options={degrees}
+          options={degree}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
           onChange={handleChange}
           freeSolo

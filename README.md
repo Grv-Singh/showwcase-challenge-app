@@ -15,6 +15,7 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 ## Highlights
 
 - ✅ Linting checked at commits using Husky
+- 🎨 Material UI
 - 🏳 Typescript based
 - 📩 Hipo (University) and Self made - Degree and Field of Study APIs used to autocomplete
 - 🥅 All relevant educational details are mentioned and some picked from LinkedIn to support educational background

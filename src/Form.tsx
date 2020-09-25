@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Checkbox from "@material-ui/core/Checkbox";
 
 interface Prop {
   getEducationDetails: (val: Object) => void;
@@ -11,8 +12,8 @@ interface Prop {
 const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
   // state varibales
   const [universities, setUniversities] = useState([]);
-  const [degrees, setDegrees] = useState([]);
-  const [fos, setFos] = useState([]);
+  const [degrees, setDegrees] = useState<any>([]);
+  const [fos, setFos] = useState<any>([]);
   const [name, setName] = useState<any>({});
   const [values, setValues] = useState<any>({
     elearn: "",
@@ -115,19 +116,19 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </label>
         <Autocomplete
           id="Degree"
-          options={degrees.map((option) => option.title)}
+          options={degrees}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          onChange={(event, newValue) => {
-            setDegrees(newValue);
-          }}
+          // onChange={(event, newValue) => {
+          //   setDegrees(newValue);
+          // }}
         />
       </div>
       <div className="form-group">
         <label className="text-muted">🌐 E-Learning</label>
         &nbsp;
-        <input
+        <Checkbox
           id="Online"
-          type="checkbox"
+          inputProps={{ "aria-label": "uncontrolled-checkbox" }}
           onChange={handleChange}
           value={elearn}
         />
@@ -138,11 +139,11 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
         </label>
         <Autocomplete
           id="study"
-          options={fos.map((option) => option.title)}
+          options={fos}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
-          onChange={(event, newValue) => {
-            setFos(newValue);
-          }}
+          // onChange={(event, newValue) => {
+          //   setFos(newValue);
+          // }}
         />
       </div>
       <div className="row">
@@ -224,8 +225,10 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
       </div>
       <div className="form-group">
         <label className="text-muted">🎞 Media (url):</label>
-        <input
-          type="text"
+        <TextField
+          id="outlined-basic"
+          label="Outlined"
+          variant="outlined"
           placeholder="ex: link to documents, photos and presentations."
           className="form-control"
           name="media"

@@ -38,7 +38,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
             </li>
             <li className="list-group-item g-font">
               🎞 Media:{" "}
-              <iframe height="200px" width="350px" src='{x["media"]}' />
+              <iframe height="200px" width="350px" src={{x["media"]}} />
             </li>
             <li className="list-group-item">
               <button

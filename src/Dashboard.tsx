@@ -5,6 +5,8 @@ import "./styles.css";
 import Form from "./Form";
 import { HashLink as Link } from "react-router-hash-link";
 import Card from "./Card";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from "@material-ui/icons/Add";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Props {
@@ -94,9 +96,9 @@ const Dashboard: React.FC<Props> = ({ user }) => {
   // add new education info
   const addNewEducationButton = (
     <div className="col-sm-12 offset-4 mb-5">
-      <button className="btn btn-primary g-font" onClick={toggleModal}>
-        ➕ New education
-      </button>
+      <Fab color="primary" aria-label="add" onClick={toggleModal}>
+        <AddIcon />
+      </Fab>
     </div>
   );
 

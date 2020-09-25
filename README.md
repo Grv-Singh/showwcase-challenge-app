@@ -31,6 +31,8 @@ There is **now a single Repo** but earlier, unfortunately did blunder in making 
 
 - Showing icon if learning was online
 - Upload media (not just urls) in mongoDB atlas / Cloud CDN like dropbox to be visible in Library.
+- Getting eduaction details from LinkedIn as shown below.
+[![Screenshot-2020-09-25-125333.jpg](https://i.postimg.cc/7hqT1zc3/Screenshot-2020-09-25-125333.jpg)](https://postimg.cc/JDdnMsR0)
 
 ## Languages and Tools:
 

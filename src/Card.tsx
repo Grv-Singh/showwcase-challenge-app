@@ -28,7 +28,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
               ✔ Field of Study: {x["fos"]}
             </li>
             <li className="list-group-item g-font">
-              ⏳ Session: {x["start"]} - {x["end"]}
+              ⏳ Session: {x["start"]} to {x["end"]}
             </li>
             <li className="list-group-item g-font">💯 Grade: {x["grade"]}</li>
             <li className="list-group-item g-font">
@@ -40,7 +40,7 @@ const Card: React.FC<Prop> = ({ details, deleteEducation }) => {
             <li className="list-group-item g-font">
               🎞 Media:{" "}
               <Iframe
-                url={{x["media"]}}
+                url={x["media"]}
                 width="200px"
                 height="200px"
                 id="media"

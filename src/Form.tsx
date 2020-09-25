@@ -119,6 +119,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           options={degrees}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
           onChange={handleChange}
+          value={degrees}
         />
       </div>
       <div className="form-group">
@@ -140,6 +141,7 @@ const Form: React.FC<Prop> = ({ toggleModal, getEducationDetails }) => {
           options={fos}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
           onChange={handleChange}
+          value={fos}
         />
       </div>
       <div className="row">
